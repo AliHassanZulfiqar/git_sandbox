@@ -70,6 +70,9 @@ than we can create our working directory folder by using
 		git commit -m 'commit_name'
 # We can check status of working directory by using
 		git status	
+# We can delete our local repository recursively by using 
+		rm -rf .git
+
 
 
 			
