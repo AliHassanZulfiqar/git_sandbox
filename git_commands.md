@@ -54,24 +54,41 @@ git config --global user.email "Email"
 
 # we can make a custom project by opening terminal or git bash anywhere and using cd "path_we_want_to_direct_terminal _to" or just open git bash in that folder and use command 
 		mkdir project_folder_name
-than we can create our working directory folder by using 
+# than we can create our working directory folder by using 
 		git init folder_name
-# it will create a folder with .git folder inside which is where our repository is located
+# it will create a folder with .git folder inside which is where our repository is located, we can also do this by making a folder manually and using
+		git init . or git init 
+	by directing our git bash into that folder, this will create a .git folder in that folder.
 
 # than we can make files in the working directory by using 
 		default_editor_name file_name.extension
 ->this will create and open the file in the default editor.
 
-# We can add this file in repo by using
+# We can add this file in staging area by using
 		git add filename.extention
 		git add .a(this adds all the files in working dir)
 
-# now the file is created but not commited yet which is staging area, we can commit the file by using 
-		git commit -m 'commit_name'
+# now the file is created but not commited yet which is staging area, we can commit the file into the repo by using 
+		git commit -m 'commit_message'
+	this can also be done by using only
+		git commit
+	which will prompt you to the default git_bash editor and you can type your commit message in the editor which be a single or multiline.
+
 # We can check status of working directory by using
 		git status	
 # We can delete our local repository recursively by using 
 		rm -rf .git
+# We can check our commits by using 
+		git log
+		git show
+# To check what files git is tracking use 
+		git ls-files
+	it will show files only which are tracked or we can say which are commited yet
+# we can add new files using git bash by typing 
+		touch new.file
+	after making this file, if we use "git status" command we will see this file as "untracked files" which is not added to staging area yet and it will not show in the "git ls-files" command.
+# We can remove the file by using bash remove command
+		rm new.file
 
 
 
