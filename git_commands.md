@@ -89,7 +89,20 @@ git config --global user.email "Email"
 	after making this file, if we use "git status" command we will see this file as "untracked files" which is not added to staging area yet and it will not show in the "git ls-files" command.
 # We can remove the file by using bash remove command
 		rm new.file
-
-
-
-			
+# If we want to unstage some changes we made before commiting them we can use
+		git reset HEAD file.name
+	it will only unstage the changes that have been added, but if we want to delete those changes completely, even from the file and go back to last stage that has been commited, we can use
+		git checkout -- file.name
+# Add & commit in a single command:
+	We generally add some files and after then commit them. However, this can be done using a single command only when there is not any new file.
+		git commit -a -m 'commit message'
+# To see the history of the git commits, branches etc
+		git help log
+	this will show allot of information but to see most important in just a few lines history use 
+		git log --online --graph --decorate --all
+# To make our own short version of long commands we can use alias command
+		git config --global alias.any_short_command_we_want "command_except_git"
+		git config --global alias.hist "log --online --graph --decorate --all"
+# To list out git config entries
+		git config --global --list
+		
