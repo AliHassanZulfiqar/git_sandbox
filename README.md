@@ -471,7 +471,7 @@ if we want to create a new branch on github we need to push to that branch by us
     git checkout 8a7b201 index.html
   If you specify "HEAD" as the revision, you will restore the last committed version of the file, effectively undoing any local changes that you current have in that file:
 
-    git checkout HEAD index.html
+  	git checkout HEAD index.html
 
 ## In order to pull changes from all the remote branches we can use
     git pull --all
