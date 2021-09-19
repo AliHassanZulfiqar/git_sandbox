@@ -148,7 +148,8 @@ git config --global user.email "Email"
 # Imp: if we want to create a new branch on github we need to push to that branch by using -u (tracking parameter)
 		git push -u origin name_of_the_branch
 
-# In order to integrate our changes into master, we need to change back to the master branch. we need to use the "checkout" command: 
+# In order to integrate our changes into master, we need to change back to the master branch.
+we need to use the "checkout" command: 
 		git checkout master 
 Once you've switched to the master branch, since we haven't fetched anything recently our local repo doesn't realize that it's actually out of date so I'm just going to do a 
 		git pull
