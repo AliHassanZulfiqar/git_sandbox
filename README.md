@@ -187,8 +187,8 @@ we see that we have master like before, locally,
 
     -b new-branch
   Creates a new local branch and directly switches to it. This can be used as a shortcut instead of the following two commands:
-    git branch new-branch-name
-    git checkout new-branch-name
+    -git branch new-branch-name
+    -git checkout new-branch-name
 
     -b new-branch --track remote-branch
   Creates a new local branch - and sets up an "upstream" configuration. This way, the new local branch has a tracking relationship with its remote counterpart. This allows you to more easily see when the two aren't in sync (i.e. when unpushed commits in the local branch or unpulled commits in the remote exist).
