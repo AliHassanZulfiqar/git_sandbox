@@ -139,19 +139,25 @@ git config --global user.email "Email"
 
 # Space for reset and reflog
 
-# we're going to specify the name of the folder we wish to use. Type "git clone", space, and then paste in the URL that should still be on our clipboard, space, and then the name of the folder you wish to create
+# we're going to specify the name of the folder we wish to use. 
+	Type "git clone", space, and then paste in the URL that should still be on our clipboard, space, and then the name of the folder you wish to create
+		
 		git clone copied_ssh_url name_of_the_folder
 # in order to update the remote references to the origin in hdd like when we change the name of the repository we can use 
+		
 		git remote set-url ssh/html_cloning_link
-	useful
+useful
+		
 		git remote show origin
-# Imp: if we want to create a new branch on github we need to push to that branch by using -u (tracking parameter)
+# Imp: 
+if we want to create a new branch on github we need to push to that branch by using -u (tracking parameter)
+		
 		git push -u origin name_of_the_branch
 
 # In order to integrate our changes into master, we need to change back to the master branch.
 we need to use the "checkout" command: 
         
-        git checkout master 
+    git checkout master 
 
 Once you've switched to the master branch, since we haven't fetched anything recently our local repo doesn't realize that it's actually out of date so I'm just going to do a 
 
