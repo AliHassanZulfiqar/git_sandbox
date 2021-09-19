@@ -213,7 +213,7 @@ git config --global user.email "Email"
 
 # To delete a remote branch from the command line
 	
-	Type:
+Type:
 
 		git push origin :branch-name
 	Doing so is telling Git to delete whatever the name is of the branch after the colon(:).
