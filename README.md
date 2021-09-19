@@ -486,5 +486,5 @@ if we want to create a new branch on github we need to push to that branch by us
 	This is a good strategy when you're working on something, and you want to make sure that your changes are ahead of whatever's going on from the remote side.
 	To do that, I can use a rebase; so type `git pull`, and then use the option `--rebase` to cause a rebase instead of a merge when it comes in.
     
-		git pull --rebase
+	git pull --rebase
   As the message says, it's first rewinding the local branch, then it brings in our changes from GitHub, and then it applies any commits that we had on the local branch.
