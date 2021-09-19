@@ -207,3 +207,6 @@ git config --global user.email "Email"
   If you specify "HEAD" as the revision, you will restore the last committed version of the file, effectively undoing any local changes that you current have in that file:
 
     git checkout HEAD index.html
+
+# In order to pull changes from all the remote branches we can use
+    git pull --all
