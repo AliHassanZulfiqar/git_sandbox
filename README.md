@@ -221,7 +221,5 @@ we see that we have master like before, locally,
 	
 	Type:
 
-				```
-				git push origin :branch-name
-				```
+					git push origin :branch-name
 	Doing so is telling Git to delete whatever the name is of the branch after the colon(:).
