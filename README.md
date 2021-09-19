@@ -169,41 +169,41 @@ git config --global user.email "Email"
 	we see that we have master like before, locally,
 
 # git checkout
-The "checkout" command can switch the currently active branch - but it can also be used to restore files.
+  The "checkout" command can switch the currently active branch - but it can also be used to restore files.
 
-The most common use case for "checkout" is when you want to switch to a different branch, making it the new HEAD branch.
+  The most common use case for "checkout" is when you want to switch to a different branch, making it the new HEAD branch.
 
-Another use case for "checkout" is when you want to restore a historic version of a specific file. Thereby, you can reset single files to earlier revisions - while keeping the rest of the project untouched.
+  Another use case for "checkout" is when you want to restore a historic version of a specific file. Thereby, you can reset single files to earlier revisions - while keeping the rest of the project untouched.
 
 # Important Options
-<branch-name>
-The name of a local branch that you want to switch to. By specifying the name of a local branch, you will switch to this branch and make it the current "HEAD" branch.
+    branch-name
+  The name of a local branch that you want to switch to. By specifying the name of a local branch, you will switch to this branch and make it the current "HEAD" branch.
 
--b <new-branch>
-Creates a new local branch and directly switches to it. This can be used as a shortcut instead of the following two commands:
-git branch <new-branch-name>
-git checkout <new-branch-name>.
+    -b new-branch
+  Creates a new local branch and directly switches to it. This can be used as a shortcut instead of the following two commands:
+    git branch new-branch-name
+    git checkout new-branch-name
 
--b <new-branch> --track <remote-branch>
-Creates a new local branch - and sets up an "upstream" configuration. This way, the new local branch has a tracking relationship with its remote counterpart. This allows you to more easily see when the two aren't in sync (i.e. when unpushed commits in the local branch or unpulled commits in the remote exist).
+    -b new-branch --track remote-branch
+  Creates a new local branch - and sets up an "upstream" configuration. This way, the new local branch has a tracking relationship with its remote counterpart. This allows you to more easily see when the two aren't in sync (i.e. when unpushed commits in the local branch or unpulled commits in the remote exist).
 
-<file-path> <commit-hash>
-Restores a historic revision of a given file. By providing HEAD as the revision, you can restore the last committed version of a file - effectively undoing any local changes that happened since then. If you want to restore a specific earlier revision you can provide that revision's SHA-1 hash.
+    file-path commit-hash
+  Restores a historic revision of a given file. By providing HEAD as the revision, you can restore the last committed version of a file - effectively undoing any local changes that happened since then. If you want to restore a specific earlier revision you can provide that revision's SHA-1 hash.
 
 # Usage Examples
-In its simplest (and most common) form, only the name of an existing local branch is specified:
+  In its simplest (and most common) form, only the name of an existing local branch is specified:
 
-$ git checkout other-branch
-This will make the given branch the new HEAD branch. If, in one go, you also want to create a new local branch, you can use the "-b" parameter:
+    git checkout other-branch
+  This will make the given branch the new HEAD branch. If, in one go, you also want to create a new local branch, you can use the "-b" parameter:
 
-$ git checkout -b new-branch
-By using the "--track" parameter, you can use a remote branch as the basis for a new local branch; this will also set up a "tracking relationship" between the two:
+    git checkout -b new-branch
+  By using the "--track" parameter, you can use a remote branch as the basis for a new local branch; this will also set up a "tracking relationship" between the two:
 
-$ git checkout -b new-branch --track origin/develop
+    git checkout -b new-branch --track origin/develop
 
-Another use case for "checkout" is when you want to restore an old revision of a file:
+  Another use case for "checkout" is when you want to restore an old revision of a file:
 
-$ git checkout 8a7b201 index.html
-If you specify "HEAD" as the revision, you will restore the last committed version of the file, effectively undoing any local changes that you current have in that file:
+    git checkout 8a7b201 index.html
+  If you specify "HEAD" as the revision, you will restore the last committed version of the file, effectively undoing any local changes that you current have in that file:
 
-$ git checkout HEAD index.html
+    git checkout HEAD index.html
