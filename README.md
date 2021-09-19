@@ -211,9 +211,8 @@ git config --global user.email "Email"
 # In order to pull changes from all the remote branches we can use
     git pull --all
 
-# To delete a remote branch from the command line, 
+# To delete a remote branch from the command line
 	Type:
 
 		git push origin :branch_name
-	
 	Doing so is telling Git to delete whatever the name is of the branch after the colon(:).
