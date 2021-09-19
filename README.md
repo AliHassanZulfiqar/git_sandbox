@@ -140,7 +140,7 @@ git config --global user.email "Email"
 # Space for reset and reflog
 
 # we're going to specify the name of the folder we wish to use. 
-	Type "git clone", space, and then paste in the URL that should still be on our clipboard, space, and then the name of the folder you wish to create
+Type "git clone", space, and then paste in the URL that should still be on our clipboard, space, and then the name of the folder you wish to create
 		
 		git clone copied_ssh_url name_of_the_folder
 # in order to update the remote references to the origin in hdd like when we change the name of the repository we can use 
