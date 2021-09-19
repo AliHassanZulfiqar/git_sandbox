@@ -151,22 +151,31 @@ git config --global user.email "Email"
 # In order to integrate our changes into master, we need to change back to the master branch.
 we need to use the "checkout" command: 
 		git checkout master 
+
 Once you've switched to the master branch, since we haven't fetched anything recently our local repo doesn't realize that it's actually out of date so I'm just going to do a 
 		git pull
+
 Great, now we've integrated all the changes that have changed on master from our GitHub repository. So, now we're ready to integrate our changes that we have on our local "example_branch" branch. Type
 		git merge the_branch_to_merge_in
+
 which is "example_branch". Using
 		git status
+
 we see that our local master is "ahead of 'origin/master' by 1 commits" So now, let's synchronize our local changes back up to GitHub using 
 		git push
+
 However, we're not done yet; let's go back to our terminal, and we have two things going on. If I do a
 		git branch -a
+
 I can see that I have a "example_branch" branch still laying around. That's the local branch that we started out with, before we pushed it up to GitHub and then later merged it back into master. We also still have that branch on GitHub, or at least the __reference to it__; that's under "remotes/origin/", branch name. So, let's fix both of those things; first thing I'm going to do is delete our branch.
 		git branch -d branch_name
+
 but we still have the "example_branch" branch referenced on origin; however, we know that that branch doesn't exist on GitHub, it's just a stale reference. So, we need to update those stale references. And one way to do that is with the "fetch" command. Type
 		git fetch -p
+
 the "-p" is the prune option, which means it's going to look for any dead branches and remove those references. Now doing a
 		git branch -a
+
 we see that we have master like before, locally,
 
 # git checkout
