@@ -391,7 +391,13 @@ What you'll notice is that, by default, tags are not sent to GitHub using the st
 		or
 		git push --tags
 
-the 2nd one is to push all the tags in a single snippet
+the 2nd one is to push all the tags in a single snippet, we can delete the tags locally by using
+
+		git tag -d tag_name
+
+for deleting tags remotely we can use
+
+		git push origin :tag_name
 ## what if we decide that we're really not supposed to be doing that right now? What if we decide that we really should have started this on a branch, or maybe we need to change content and work on something else for a while?
 	Well, we can do that by using Git's stashing ability
 		git stash
