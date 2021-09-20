@@ -369,16 +369,32 @@ git config --global user.email "Email"
 		git difftool 1st_commit/branch 2nd_commit/branch
 ## if we "cat" the file, it just outputs the entire contents of that file
 
-## So, if we want to mark some point in the repository with some type of milestone. We can use 
+## So, if we want to mark some point in the repository with some type of milestone. 
+We can use 
+	
 		git tag tag_name
-		git tag -a tag_name -m "tag_message"
-	we can list by 
+  
+Simple and lightweight tags simply label a specific commit; there's no extra information associated with those tags.
+	The next set of tags I want to create are going to be release tags, or annotated tags.
+
+	git tag -a tag_name -m "tag_message"
+	git tag -a tag_name -m "tag_message" commit_id
+	
+we can list by 
+	
 		git tag --list
-	we can also use our "git show" command, and then specify our tag name. This is really useful when you're trying to note major milestones and you might want to associate some information with it.
+we can also use our `git show` command, and then specify our tag name. This is really useful when you're trying to note major milestones and you might want to associate some information with it.
+
+What you'll notice is that, by default, tags are not sent to GitHub using the standard `git push` command. Since we just issued the `git push` command, and now we need to use the `git push` command, specifying the tags we want to push. Type:
+
+		git push origin tag_name
+		or
+		git push --tags
+
 ## what if we decide that we're really not supposed to be doing that right now? What if we decide that we really should have started this on a branch, or maybe we need to change content and work on something else for a while?
 	Well, we can do that by using Git's stashing ability
 		git stash
-	If we do a "git stash list", it shows us our stashes.
+	If we do a `git stash list`, it shows us our stashes.
 
 ## Space for reset and reflog
 
@@ -479,7 +495,7 @@ if we want to create a new branch on github we need to push to that branch by us
 ## To delete a remote branch from the command line
   Type:
 
-		git push origin :branch-name
+	git push origin :branch-name
   Doing so is telling Git to delete whatever the name is of the branch after the colon(:).
 ## what rebase actually does is
   it rewinds the current commits that are on your branch to a point to where the branch you're merging in originally diverged; then playing back the commits that happened on the branch that you're wanting to bring in; and then, after that, playing on top of that any commits that have happened on the branch that you're currently on, thus making any changes that you have include the changes that happened on the remote branch, but with your changes made ahead of them.
