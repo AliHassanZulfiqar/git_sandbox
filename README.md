@@ -398,6 +398,14 @@ the 2nd one is to push all the tags in a single snippet, we can delete the tags 
 for deleting tags remotely we can use
 
 		git push origin :tag_name
+
+Let's update our tag to point to the new commit id. In order to update an existing tag, you need to use the `-f` option with the `git tag` command.
+
+		git tag -f name_of_the_tag_to_modify commit_id_to_use_with_the_tag
+
+Like before, if we type `git push origin tag_name`, we try to push our tag named unstable; however, GitHub tells us that it already exists, and it rejects the push because of that. We can overcome this error by using 
+
+		git push --force origin tag_name
 ## what if we decide that we're really not supposed to be doing that right now? What if we decide that we really should have started this on a branch, or maybe we need to change content and work on something else for a while?
 	Well, we can do that by using Git's stashing ability
 		git stash
