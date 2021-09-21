@@ -519,3 +519,11 @@ if we want to create a new branch on github we need to push to that branch by us
     
 	git pull --rebase
   As the message says, it's first rewinding the local branch, then it brings in our changes from GitHub, and then it applies any commits that we had on the local branch.
+## So, how do we synchronize our upstream repository from which we forkeddown to our individual copy of our repository?
+We do have the ability to add more remotes that refer to other Git repositories from which we can push and pull. To do that, we need to use the "git remote add" command; type
+		
+		git remote add name_of_the_remote_reference_we_wish_to_create ssh_cloned_url
+
+It can be anything we want, as long as it's something that we can remember. Now I'm going to use the "git pull" command, specifying our "upstream" repository to fetch any updates from that master branch. Type:
+
+		git pull new_reference branch_name_from_ref_remote
