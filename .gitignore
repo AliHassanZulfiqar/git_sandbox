@@ -2,3 +2,6 @@ mynew.txt
 
 ## MacOs files
 .DS_Store
+
+## executable file
+.exe
